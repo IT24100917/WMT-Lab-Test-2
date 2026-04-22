@@ -17,6 +17,9 @@ export default function App() {
   const fetchBooks = async () => {
     try {
       const res = await getBooks();
+      if (!Array.isArray(res.data)) {
+        throw new Error("Invalid response from server. Check API URL.");
+      }
       setBooks(res.data);
     } catch (err) {
       setError("Could not load books. Is the backend running?");
