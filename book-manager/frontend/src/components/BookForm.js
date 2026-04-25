@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-const EMPTY = { title: "", author: "", genre: "", rating: 3 };
+const EMPTY = { title: "", author: "", genre: "", price: "",  rating: 3 };
 
 export default function BookForm({ onSubmit, editingBook, onCancel }) {
   const [form, setForm] = useState(EMPTY);
@@ -46,8 +46,13 @@ export default function BookForm({ onSubmit, editingBook, onCancel }) {
         onChange={handleChange}
         required
       />
-
-      {/* ★ EXTRA FIELD — Rating (1–5) */}
+      <input
+        name="price"
+        placeholder="Price"
+        value={form.price}
+        onChange={handleChange}
+        required
+      />
       <input
         name="rating"
         type="number"

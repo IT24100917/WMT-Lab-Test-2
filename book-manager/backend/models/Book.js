@@ -18,6 +18,11 @@ const bookSchema = new mongoose.Schema(
       trim: true,
     },
     // ★ EXTRA FIELD — this is what you'll "add" in the lab test
+    price: {
+      type: Number,
+      required: true,
+      trim: true,
+    },
     rating: {
       type: Number,
       min: 1,

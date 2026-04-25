@@ -13,7 +13,7 @@ export default function BookList({ books, onEdit, onDelete }) {
             <h3>{book.title}</h3>
             <p>by {book.author}</p>
             <span className="genre-tag">{book.genre}</span>
-            {/* ★ Shows the extra rating field */}
+            <p> Price: {book.price}</p>
             <span className="rating">{"⭐".repeat(book.rating)}</span>
           </div>
           <div className="book-actions">
